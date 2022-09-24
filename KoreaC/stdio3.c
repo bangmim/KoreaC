@@ -7,7 +7,7 @@ return 0;
 */
 
 
-void main() {
+void main3() {
 	// 자주 바뀔 것 같은 혹은 중요한 정보는 미리 저장을 해두어야 한다.
 	// 변수 (저장공간)
 	// p.32
@@ -31,5 +31,14 @@ void main() {
 	float 몸무게 = 80.7;
 	char 문자 = 'A';
 
+	//변수를 사용하는 법
+	//char -> %c
+	//int -> %d
+	//float -> %f
+	//char[] -> %s
+
 	printf("%d", 나이);
+	printf("\n%s", 이름);
+	printf("\n몸무게는 %.1f", 몸무게);	//소수점 자리수 지정 가능
+	printf("\nname: %s, age: %d", 이름, 나이);
 }
