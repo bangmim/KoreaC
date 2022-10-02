@@ -1,6 +1,7 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 
-void main() {
+void main8() {
 	//p.110
 	char alpha = 'C';
 
