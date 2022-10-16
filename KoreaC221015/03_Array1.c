@@ -90,26 +90,32 @@ int main() {
 	printf("배열의 모든 요소의 평균 : %f\n", avg);
 
 	//(2)단어를 입력받아 역순으로 출력하는 프로그램
-#define ARR_SIZE 1000						//array size 지정
-	char eng[ARR_SIZE] = {0,};				//0~999			//초기화 할 때에는 값을 입력해놓아야 한다.
-	char oper[ARR_SIZE]={0,};
+	#define ARR_SIZE 1000						//array size 지정
+	char eng[ARR_SIZE] = { 0, };				//0~999			//초기화 할 때에는 값을 입력해놓아야 한다.
+	char oper[ARR_SIZE] = { 0, };
 	printf("영단어 입력: \n");
 	scanf("%s", eng);
 
-	for (int i = ARR_SIZE; i > 0; i--) {
-		if (eng[i - 1] == 0) {
-			continue;					//null값이면 계속
+	//영어단어를 거꾸로 하는 배열 만들기 : 인덱스의 시작을 array의 끝에서부터 하나씩 줄어들게한다.
 
-			oper[ARR_SIZE - i] = eng[i - 1];
-			printf("%c", oper[ARR_SIZE - 1]);
+	for (int i = ARR_SIZE; i > 0; i--) {
+
+		if (eng[i - 1] == 0) {		//oper[0] 값을 위해
+			continue;
 		}
+
+		oper[ARR_SIZE - i] = eng[i - 1];				//eng[i] eng[-1]
+		printf("%c", oper[ARR_SIZE - i]);
 	}
 
 	//(3)사용자로부터 영어 단어 하나를 입력 받아 char형 배열에 저장.
+//저장된 영문자 중 아스키 코드 값이 가장 큰 문자를 알려주는 프로그램
 #define ENGLI_SIZE 100
+
 	char engli[ENGLI_SIZE];
 	char bk = 0;
-	printf("영어단어 입력: \n");
+
+	printf("\n영어단어 입력: \n");
 	scanf("%s", engli);
 	bk = engli[0];
 
